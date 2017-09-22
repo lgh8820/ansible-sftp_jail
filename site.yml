@@ -1,7 +1,9 @@
 ---
 - name: test-playbook | Test sftp-server role
-  hosts: all
-  sudo: yes
+  hosts: test
+#  sudo: yes
+  roles:
+    - ansible-sftp_jail
   vars_files:
     - 'defaults/main.yml'
   tasks:
